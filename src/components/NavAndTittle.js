@@ -14,7 +14,11 @@ const NavAndTittle = () => {
                     </NavLink>
                 </ul>
             </nav>
-            <h1>Movies app</h1>
+            <div className="logo">
+            <h1>Netflist</h1>
+            <p>Des films pour tous les goûts!</p>
+            </div>
+            
         </header>
     );
 };

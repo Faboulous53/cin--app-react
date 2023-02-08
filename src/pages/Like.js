@@ -1,10 +1,9 @@
 import React from 'react';
+import NavAndTittle from '../components/NavAndTittle';
 
 const Like = () => {
     return (
-        <div>
-            
-        </div>
+        <NavAndTittle/>
     );
 };
 
