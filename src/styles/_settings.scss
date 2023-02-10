@@ -1,15 +1,14 @@
-@font-face { 
-    font-family: "font-1";
+@font-face {
+    font-family: 'font-1';
     src: url(../assets/fonts/ChelseaMarket-Regular.ttf);
-  }
-  
-  $font-1: "font-1", sans-serif;
+}
 
+$font-1: 'font-1', sans-serif;
 
 $color-1: #5e1717;
 $color-2: rgb(96, 96, 96);
 $color-3: #dedfe1;
- 
+
 * {
     padding: 0;
     margin: 0;
@@ -17,11 +16,11 @@ $color-3: #dedfe1;
     text-decoration: none;
 }
 
-body{
-    background-color: rgb(61, 60, 60);
-}
 
 li {
     list-style-type: none;
 }
 
+ul{
+    display: flex;    
+}

@@ -5,10 +5,10 @@ import NavAndTittle from '../components/NavAndTittle';
 const Home = () => {
     return (
         <div>
-        <NavAndTittle/>
-        <Movies/>
+            <NavAndTittle />           
+            <Movies />
+            
         </div>
-        
     );
 };
 
