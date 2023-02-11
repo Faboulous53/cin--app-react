@@ -17,7 +17,7 @@ useEffect(() => {
 
     return (
         
-        <div>
+        <div className='container-cards'>
             <ul>
                 {
                     moviesdata
