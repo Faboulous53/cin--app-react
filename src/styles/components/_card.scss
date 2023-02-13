@@ -16,7 +16,7 @@ ul{
     color: white;
     font-family: $font-1;
     margin: 10px;
-    text-align: center;
+    text-align: center;    
 
     h2{               
         font-size: 0.8rem;
@@ -29,21 +29,35 @@ ul{
         margin: 0 auto;
     }
 
-    .container-average{
+    .container-average{        
         width: 90px;
         min-width: 20%;
         display: flex; 
-        justify-content: center;
-        margin: 10px;
+        justify-content: center;        
+        margin: 10px auto;
         padding: 5px;        
         background-color: $color-1;   
-        border-radius: 10px;
+        border-radius: 10px;   
                 
     }    
 
     .note{
         color: yellow;        
-        padding-right: 5px;
-        
+        padding-right: 5px;        
+    }
+
+    .genre-date{
+        display: grid;
+        grid-template-columns: 50%;
+        gap: 5px;
+        overflow: hidden;
+
+    }
+
+    .genre{
+        font-size: 0.6rem;        
+        background: $color-2;        
+        border-radius: 5px; 
+        color: $color-1;       
     }
 }

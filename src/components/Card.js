@@ -1,7 +1,78 @@
 import React from 'react';
 
 const Card = ({ movie }) => {
-    const genreLink = "https://api.themoviedb.org/3/genre/movie/list?api_key=6df5915ad72530ff9fc45aed522c903c&language=fr-FR";
+
+    const genreType = () => {
+        let genreArray = [];
+        for (let i = 0; i < movie.genre_ids.length; i++) {
+        switch (movie.genre_ids[i]){
+            case 28:
+                genreArray.push('Action');
+                break;               
+            case 12:
+                genreArray.push('Aventure'); 
+                break;               
+            case 16:
+                genreArray.push('Animation');
+                break;
+            case 35:
+                genreArray.push('Comédie');
+                break;
+            case 80:
+                genreArray.push('Crime');
+                break;
+            case 99:
+                genreArray.push('Documentaire');
+                break;
+            case 18:
+                genreArray.push('Drame');
+                break;
+            case 10751:
+                genreArray.push('Familial');
+                break;
+            case 14:
+                genreArray.push('Fantastique');
+                break;
+            case 36:
+                genreArray.push('Histoire');
+                break;
+            case 27:
+                genreArray.push('Horreur');
+                break;
+            case 10402:
+                genreArray.push('Musique');
+                break;
+            case 9648:
+                genreArray.push('Mystère');
+                break;
+            case 10749:
+                genreArray.push('Romance');
+                break;
+            case 878:
+                genreArray.push('Science-Fiction');
+                break;
+            case 10770:
+                genreArray.push('Téléfilm');
+                break;
+            case 53:
+                genreArray.push('Thriller');
+                break;
+            case 10752:
+                genreArray.push('Guerre');
+                break; 
+                
+                default:
+                    break;                   
+        }   
+        }
+        return genreArray;
+    } ;
+
+    const dateFormat = () => {
+       
+        
+        
+    }
 
     
     return (
@@ -20,8 +91,11 @@ const Card = ({ movie }) => {
                 <i class="fa-solid fa-ranking-star note"></i>
                 <p>{movie.vote_average}</p>
             </div>
-            <p className="genre">Genre</p>
-            
+
+            <div className="genre-date">
+            <p className='genre'> Type: {movie.genre_ids ? genreType().join(" ") : "Pas défini"}</p>
+            <p className='genre'> Sortie le {dateFormat()}</p>
+            </div>
         </li>
     );
 };
