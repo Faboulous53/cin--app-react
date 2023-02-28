@@ -25,8 +25,9 @@ const NavAndTittle = () => {
                 <div className="txt">
                     <h1>Netflist</h1>
                     <p>Des films pour tous les goûts!</p>
-                </div>
+                </div>                
             </div>
+            
         </header>
     );
 };

@@ -68,13 +68,12 @@ const Card = ({ movie }) => {
         return genreArray;
     } ;
 
-    const dateFormat = () => {
-       
-        
+    const dateFormat = (date) => {
+        return date.split('-').reverse().join('-');       
         
     }
 
-    
+   
     return (
         <li className="card">
             <h2>{movie.title}</h2>
@@ -94,7 +93,11 @@ const Card = ({ movie }) => {
 
             <div className="genre-date">
             <p className='genre'> Type: {movie.genre_ids ? genreType().join(" ") : "Pas défini"}</p>
-            <p className='genre'> Sortie le {dateFormat()}</p>
+            <p className='genre'> Sortie le {movie.release_date ? dateFormat(movie.release_date) : 'Pas de date'}</p>
+            </div>
+
+            <div className="description">
+                <p>{movie.overview}</p>
             </div>
         </li>
     );
