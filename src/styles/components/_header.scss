@@ -1,79 +1,15 @@
 header {
     nav {
         background: black;
-    }
-    ul {
-        display: flex;
-    }
+        max-width: 500px;
+        margin: 0 auto;
 
-    nav ul li {
-        margin: 5px 5px;
-        padding: 5px 8px;
-        font-family: $font-1;
-        background-color: $color-1;
-        color: $color-2;
-        border-radius: 15px;
-
-        &:hover {
-            color: $color-1;
-            background-color: $color-2;
-            transition: 1s ease-in-out;
-        }
-    }
-
-    .logo {
-        width: 100%;        
-        position: relative;
-        background: linear-gradient(90deg, rgba(11,11,11,1) 39%, $color-1 100%, rgba(0,212,255,1) 100%);
-        background-size: 400% 400%;
-        animation: gradient-bg 10s ease infinite;
-
-        @keyframes gradient-bg {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        video {
-            margin: auto;
-            display: block;
-            height: 200px;
-            border-radius: 10px;
-
-        }
-
-        .txt {
-            position: absolute;
-            top: 0;
-            left: 0;
+        ul{
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-        h1 {
-            text-align: center;
-            font-family: $font-1;
-            color: white;
-            font-size: 2rem;
-            -webkit-text-stroke: 0.1px black;
-        }
-
-        p {
-            font-family: $font-1;
-            color: white;
-            text-align: center;
-            font-size: 1rem;
-            -webkit-text-stroke: 0.8px black;
+            align-self: start;
         }
     }
+   
+    
 }
 

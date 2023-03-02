@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Card = ({ movie }) => {
+    
+    
 
     const genreType = () => {
         let genreArray = [];
@@ -65,14 +67,15 @@ const Card = ({ movie }) => {
                     break;                   
         }   
         }
-        return genreArray;
+        return genreArray.join(" ");
     } ;
 
     const dateFormat = (date) => {
-        return date.split('-').reverse().join('-');       
+        return date.split('-').reverse().join('/');       
         
-    }
-
+    }  
+    
+    
    
     return (
         <li className="card">
@@ -92,12 +95,13 @@ const Card = ({ movie }) => {
             </div>
 
             <div className="genre-date">
-            <p className='genre'> Type: {movie.genre_ids ? genreType().join(" ") : "Pas défini"}</p>
-            <p className='genre'> Sortie le {movie.release_date ? dateFormat(movie.release_date) : 'Pas de date'}</p>
+           {movie.genre_ids.length > 0 ? <p className='genre'>Type: {genreType()}</p> : ""}
+
+            <p className='genre'> Sortie le: {movie.release_date ? dateFormat(movie.release_date) : 'Pas de date'}</p>
             </div>
 
             <div className="description">
-                <p>{movie.overview}</p>
+                <p>{movie.overview? movie.overview : "Pas de description"}</p>
             </div>
         </li>
     );

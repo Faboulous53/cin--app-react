@@ -4,18 +4,20 @@ import Card from './Card';
 
 
 const Movies = () => {
-const[nameSearch, setNameValueSearch] = useState([]);  
-const linkConnect = "https://api.themoviedb.org/3/search/movie?api_key=6df5915ad72530ff9fc45aed522c903c&query=avatar&language=fr-FR"
-// const imgLink = "https://image.tmdb.org/t/p/w500";  
-const[moviesdata, setMoviesData] = useState([]);
-const[valueRange, setValueRange] = useState([4]);
 
+
+const[nameSearch, setNameValueSearch] = useState(["avatar"]);  
+const[moviesdata, setMoviesData] = useState([]);
+const[valueRange, setValueRange] = useState([2]);
 
 useEffect(() => {
     axios
-    .get(linkConnect)
+    .get(`https://api.themoviedb.org/3/search/movie?api_key=6df5915ad72530ff9fc45aed522c903c&query=${nameSearch}&language=fr-FR `)
     .then((res) => setMoviesData(res.data.results));     
-},[linkConnect])
+},[nameSearch])
+
+
+
 
 
     return (
@@ -23,19 +25,22 @@ useEffect(() => {
         
         <div className='container-cards'>
             <div className="filter">
-                <p>{valueRange}</p>
-                <input type="range" min="4" max="20" value={valueRange} onChange={(e) => setValueRange(e.target.value)}/>
-                <input  className='name-movie' type="text" placeholder='Recherche par nom' onChange={(e) => setNameValueSearch(e.target.value)}/>                
+                <p>Nombre de films à afficher: {valueRange}</p>
+                <input type="range" min="1" max="20" value={valueRange} onChange={(e) => setValueRange(e.target.value)}/>
+                 <input  className='name-movie' type="text" placeholder='Recherche par nom' onChange={(e) => setNameValueSearch(e.target.value)}/> 
+                               
             </div>
-            <ul>
+            <ul className='movies'>
                 {   
-                    moviesdata
-                    .slice(0,valueRange)
-                    .filter(movie => movie.title.includes(nameSearch))                                
-                    .map((movie) => (                                                
-                        <Card key={movie.id} movie={movie}/>
-                    ))
+                    moviesdata     
+                                
+                    .slice(0,valueRange)                                                                 
+                    .map((movie) => (
+                         <Card key={movie.id} movie={movie}/>
+                          ))                                                                            
+                                                                                     
                 }
+                
             </ul>
         </div>
     );
