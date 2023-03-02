@@ -1,12 +1,45 @@
 header {
     nav {
-        background: black;
+        background: rgba(0, 0, 0, 0.37);
         max-width: 500px;
         margin: 0 auto;
+        padding: 3px;
+        border-radius: 10px;
+        
 
         ul{
             display: flex;
-            align-self: start;
+            justify-content: space-around;
+
+            li{
+                font-family: $font-2;
+                color: aliceblue;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    
+                    color: $color-1;
+                    transform: rotate(3deg);
+                    scale: 1.2;
+
+                    
+                }
+            }
+        }
+    }
+
+    .logo{
+       
+        max-width: 30%;
+        margin: 20px auto;
+        text-align: center ;
+        font-family: $font-2;
+        background: rgba(255, 255, 255, 0.141);
+        border-radius: 20px;
+    
+        img{
+            margin: -1rem 0 -2rem 0;
+            max-width: 80%;
         }
     }
    
