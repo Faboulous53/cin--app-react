@@ -43,7 +43,9 @@ const Movies = () => {
             </div>  
             <div className="cards-all">        
             <ul className="movies">
-                {moviesdata.slice(0, valueRange).map((movie) => (
+                {moviesdata
+                    .slice(0, valueRange)
+                    .map((movie) => (
                     <Card key={movie.id} movie={movie} />
                 ))}
             </ul>

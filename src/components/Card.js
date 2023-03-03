@@ -102,7 +102,7 @@ const Card = ({ movie }) => {
             </div>
 
             <div className="genre-date">
-           {movie.genre_ids.length > 0 ? <p className='genre'>Type: {genreType()}</p> : ""}
+           {movie.genre_ids? <p className='genre'>Type: {genreType()}</p> : ""}
 
             <p className='genre'> Sortie le: {movie.release_date ? dateFormat(movie.release_date) : 'Pas de date'}</p>
             </div>
