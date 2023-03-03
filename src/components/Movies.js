@@ -3,9 +3,10 @@ import axios from 'axios';
 import Card from './Card';
 
 const Movies = () => {
-    const [nameSearch, setNameValueSearch] = useState(['avatar']);
+    const [nameSearch, setNameValueSearch] = useState(['a']);
     const [moviesdata, setMoviesData] = useState([]);
     const [valueRange, setValueRange] = useState([2]);
+     
 
     useEffect(() => {
         axios
@@ -14,6 +15,8 @@ const Movies = () => {
             )
             .then((res) => setMoviesData(res.data.results));
     }, [nameSearch]);
+
+    
 
     return (
         <div className="container-cards">

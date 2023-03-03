@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/ChelseaMarket-Regular.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/ConcertOne-Regular.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background: url(../assets/img/last-of-us-ellie-tess.jpg) center/cover fixed;
+}
+
+header nav {
+  background: rgba(0, 0, 0, 0.37);
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 3px;
+  border-radius: 10px;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+header nav ul li {
+  font-family: "font-2", sans-serif;
+  color: aliceblue;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+header nav ul li:hover {
+  color: #f49f3f;
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
+  scale: 1.2;
+}
+header .logo {
+  max-width: 30%;
+  margin: 20px auto;
+  text-align: center;
+  font-family: "font-2", sans-serif;
+  background: rgba(255, 255, 255, 0.141);
+  border-radius: 20px;
+}
+header .logo img {
+  margin: -1rem 0 -2rem 0;
+  max-width: 80%;
+}
+
+.container-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container-cards .filter {
+  background: rgba(0, 0, 0, 0.626);
+  color: #dedfe1;
+  padding: 5px 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+.container-cards .filter .range {
+  font-family: "font-1", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+.container-cards .filter .name-movie {
+  background: #f49f3f;
+  border-radius: 10px;
+  text-align: center;
+}
+
+ul {
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+ul .card {
+  margin: 10px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.895);
+  color: white;
+  font-family: "font-1", sans-serif;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.56);
+          box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.56);
+}
+ul .card h2 {
+  font-size: 1rem;
+  padding: 5px;
+}
+ul .card img {
+  width: 90%;
+  border-radius: 10px;
+}
+ul .card .container-average {
+  width: 90px;
+  min-width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: #f49f3f;
+  border-radius: 10px;
+}
+ul .card .note {
+  color: yellow;
+  padding-right: 5px;
+}
+ul .card .genre-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+  overflow: hidden;
+}
+ul .card .genre {
+  padding: 5px;
+  font-size: 0.5rem;
+  max-width: 50%;
+  background: rgb(96, 96, 96);
+  border-radius: 5px;
+  color: #f49f3f;
+}
+ul .card .description {
+  margin: auto 10px;
+  padding: 5px;
+  border: 2px solid red;
+  border-radius: 10px;
+  max-height: 100px;
+  -webkit-filter: drop-shadow(10px 16px 20px red);
+          filter: drop-shadow(10px 16px 20px red);
+  overflow: hidden;
+}
+ul .card .description p {
+  font-size: 0.5rem;
+}/*# sourceMappingURL=index.css.map */

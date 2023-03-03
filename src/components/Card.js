@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Card = ({ movie }) => {
-    
-    
+const Card = ({ movie }) => {      
+        
 
     const genreType = () => {
         let genreArray = [];
@@ -75,7 +74,15 @@ const Card = ({ movie }) => {
         
     }  
     
-    
+    const addStorage = () => {
+        let storedData = window.localStorage.movies
+         ? window.localStorage.movies.split(",") 
+         : [];
+        if(!storedData.includes(movie.id.toString())){
+         storedData.push(movie.id)
+        }
+        window.localStorage.movies = storedData;
+    }        
    
     return (
         <li className="card">
@@ -103,6 +110,10 @@ const Card = ({ movie }) => {
             <div className="description">
                 <p>{movie.overview? movie.overview : "Pas de description"}</p>
             </div>
+            <div className='like' onClick={() => addStorage(movie.id)} >
+            <i class="fa-solid fa-heart-circle-plus"></i>
+            </div>
+            
         </li>
     );
 };
